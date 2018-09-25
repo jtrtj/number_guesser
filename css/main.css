@@ -81,3 +81,12 @@ nav ul {
   cursor: not-allowed;
   border-radius: 16px;
 }
+
+.game-text {
+  color: #404041;
+}
+
+.guess-text {
+  color: #EB008B;
+  font-size: 5em;
+}
