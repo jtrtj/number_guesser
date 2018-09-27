@@ -6,6 +6,7 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+  text-align: center;
 }
 
 header {
@@ -18,21 +19,9 @@ nav ul {
   list-style: none;
   text-align: center;
 }
-
-.grid-parent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.box {
-  grid-column: 2 / 3;
+.game {
   text-align: center;
 }
-
-.box-item {
-  align-content: center;
-}
-
 .logo {
   font-size: 24px;
 }
