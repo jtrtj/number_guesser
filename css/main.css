@@ -42,17 +42,30 @@ nav ul {
   color: #E6E7E8;
 }
 
-
+.range {
+  height: 24px;
+  padding: 10px;
+}
 .enabled-button {
   background: #929497;
   color: #FFFFFF;
   border: none;
-  padding: 10px 10%;
+  padding: 10px;
   text-align: center;
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 16px;
+}
+.sml-btn {
+  width: 100px;
+}
+.lrg-btn {
+  width: 180px;
+}
+
+.lrg-input {
+  width: 180px;
 }
 
 .enabled-button:hover {
@@ -63,7 +76,7 @@ nav ul {
   background: #D0D2D3;
   color: #FFFFFF;
   border: none;
-  padding: 10px 10%;
+  padding: 10px;
   text-align: center;
   display: inline-block;
   margin: 4px 2px;

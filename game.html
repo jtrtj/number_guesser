@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open+Sans">
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,700">
   <link href="css/main.css" rel="stylesheet" type="text/css"/>
   <title>Number Guesser</title>
 </head>
@@ -15,7 +15,7 @@
       <nav>
         <ul>
           <li class="logo">
-            <a class="bold magenta">Number</a><a class="light grey">Guesser</a>
+            <a class="bold magenta">Number</a> <a class="light grey">Guesser</a>
           </li>
         </ul>
       </nav>
@@ -23,11 +23,9 @@
 
     <main class="game" id="game">
       <h2>Set up the game:</h2>
-      <input type="number" id="start" placeholder="Select start of range">
-      <input type="number" id="end" placeholder="Select end of range"><br>
-      <button class="enabled-button" id="startGame">Start Game</button><br>
-
-    
+      <input type="number" class="range" id="start" placeholder="Select start of range">
+      <input type="number" class="range" id="end" placeholder="Select end of range"><br>
+      <button class="enabled-button lrg-btn" id="startGame">Start Game</button><br>
     </main>
 
   </div>

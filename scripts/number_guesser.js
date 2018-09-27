@@ -3,16 +3,18 @@ startGame.onclick = function() {setupGame()};
 
 function enableButton(id) {
   let button = document.getElementById(id);
-  button.className = "enabled-button";
+  button.classList.remove("disabled-button");
+  button.classList.add("enabled-button");
 };
 
 function clearGuessField() {
   document.getElementById("guess").value = "";
-  clearButton.className = "disabled-button";
+  clearButton.classList.remove("enabled-button");
+  clearButton.classList.add("disabled-button");
 };
 
 function resetGame() {
-  location.reload()
+  location.reload();
 };
 
 function randNum(start, end) {
@@ -32,18 +34,19 @@ function setupGame() {
 };
 
 function createGame() {
-  let game = document.getElementById("game")
-  game.innerHTML = gameControls()
+  let game = document.getElementById("game");
+  game.innerHTML = gameControls();
   function gameControls() {
     return `
-  <input type="number" id="guess" placeholder="Enter a guess between ${start} & ${end}"><br>
-  <button class="enabled-button" id="guessButton">Guess</button>
-  <button class="disabled-button" id="clearButton">Clear</button><br>
+  <h3>Try your best to guess the number:</h3>
+  <input type="number" id="guess" class="range lrg-input" placeholder="Enter a guess between ${start} & ${end}"><br>
+  <button class="enabled-button sml-btn" id="guessButton">Guess</button>
+  <button class="disabled-button sml-btn" id="clearButton">Clear</button><br>
   <div id="gameOutput">
     
   </div><br>
-  <button class="disabled-button" id="resetButton">Reset</button>`;
-  }
+  <button class="disabled-button lrg-btn" id="resetButton">Reset</button>`;
+  };
 
   const guessField = document.getElementById("guess");
   guessField.oninput = function() {enableButton("resetButton")
@@ -66,7 +69,7 @@ function overUnder(playerGuess) {
     return "That is too high"
   } else {
     return "That is too low"
-  }
+  };
 };
 
 function increaseDifficulty() {
@@ -81,15 +84,15 @@ function checkGuess() {
     increaseDifficulty();
     document.getElementById("gameOutput").innerHTML = `
       <p>Your last guess was</p>
-      <h1 class="guess-text">${guess}</h1>
+      <a class="guess-text">${guess}</a>
       <p>BOOM!</p>
       <p>difficulty increased, range is now between ${start} & ${end}</p>`;
   } else if ( guess < start || guess > end ) {
-    alert("That guess is outside the range of possible answers!")
+    alert("That guess is outside the range of possible answers!");
   } else {
     document.getElementById("gameOutput").innerHTML = `
     <p class="game-text">Your last guess was</p>
     <h1 class="guess-text">${guess}</h1>
-    <p class="game-text">${overUnder(guess)}</p>`
+    <p class="game-text">${overUnder(guess)}</p>`;
   }
 };
