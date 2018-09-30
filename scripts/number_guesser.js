@@ -50,7 +50,7 @@ function createGame() {
 
   const guessField = document.getElementById("guess");
   guessField.oninput = function() {enableButton("resetButton")
-                                  enableButton("clearButton")};
+                                   enableButton("clearButton")};
 
   const clearButton = document.getElementById("clearButton");
   clearButton.onclick = function() {clearGuessField()};
@@ -82,6 +82,8 @@ function checkGuess() {
   let guess = parseInt(document.getElementById("guess").value);
   if ( guess === number ) {
     increaseDifficulty();
+    clearGuessField();
+    document.getElementById("guess").placeholder = `Enter a guess between ${start} & ${end}`
     document.getElementById("gameOutput").innerHTML = `
       <p>Your last guess was</p>
       <a class="guess-text">${guess}</a>
@@ -92,7 +94,7 @@ function checkGuess() {
   } else {
     document.getElementById("gameOutput").innerHTML = `
     <p class="game-text">Your last guess was</p>
-    <h1 class="guess-text">${guess}</h1>
+    <a class="guess-text">${guess}</a>
     <p class="game-text">${overUnder(guess)}</p>`;
   }
 };

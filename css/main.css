@@ -42,10 +42,6 @@ nav ul {
   color: #E6E7E8;
 }
 
-.range {
-  height: 24px;
-  padding: 10px;
-}
 .enabled-button {
   background: #929497;
   color: #FFFFFF;
@@ -61,11 +57,18 @@ nav ul {
   width: 100px;
 }
 .lrg-btn {
-  width: 180px;
+  width: 200px;
+}
+
+input {
+  margin: 4px 2px;
+  font-size: 14px;
+  height: 30px;
+  text-align: center;
 }
 
 .lrg-input {
-  width: 180px;
+  width: 250px;
 }
 
 .enabled-button:hover {
